@@ -25,7 +25,9 @@
 
 <body>
     <div class="container">
-        <img class='mobile' alt='mobile image' src="image-product-mobile.jpg">
+        <img class='product-img' alt='perfume bottle' 
+        srcset="image-product-desktop.jpg 600w, image-product-mobile.jpg 686w"
+        sizes="(min-width: 500px) 600px, 686px" >
         <div class="writeup">
             <p class="perfume">PERFUME</p>
             <h1 class="essence">Gabrielle Essence Eau De Parfum</h1>
@@ -33,11 +35,12 @@
                 Perfumer-Creator for the House of CHANEL.</p>
             <h1 class="price">$149.99</h1>
             <p class="lowp">$169.99</p>
-            <div class="divbtn"><button class="btn" onclick="alert('Item has been added')">
-            <img class='icon' alt='image of a shopping cart' src="icon-cart.svg">
-            <p class="add">Add to Cart</p>
-            </button>
-        </div>
+            <div class="divbtn">
+                <button class="btn" onclick="alert('Item has been added')">
+                    <img class='icon' src="icon-cart.svg">
+                    <p class="add">Add to Cart</p>
+                </button>
+            </div>
         </div>
     </div>
     <Footer>
