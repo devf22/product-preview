@@ -1,18 +1,26 @@
 * {
     box-sizing: border-box;
+    margin:0;
+    padding:0;
+}
+
+img, svg {
+    display: block;
+    max-width:100%;
 }
 
 body {
     background-color: hsl(30, 38%, 92%);
     padding-top: 5px;
-    padding-bottom:0;
+    padding-bottom: 0;
 }
 
-.container {
+.container {display:flex;
+    flex-direction:column;
+    justify-content: center;
     background-color: white;
     border-radius: 10px;
     margin: 10px 10px;
-    padding-bottom: 20px;
 }
 
 .perfume {
@@ -27,21 +35,18 @@ body {
 .essence {
     font-family: Fraunces;
     font-weight: 700;
-    margin-left: 20px;
     letter-spacing: 0;
     margin-top: 4px;
 }
 
 .para {
     font-family: Montserrat;
-    margin-left: 20px;
 }
 
 .price {
     font-family: Fraunces;
     color: hsl(158, 36%, 37%);
     font-weight: 700;
-    margin-left: 20px;
     margin-bottom: 0;
 }
 
@@ -55,18 +60,21 @@ body {
     margin-bottom: 0;
 }
 
-.mobile {
+.product-img {
     object-fit: cover;
+    border-radius: 10px 10px 0 0;
     width: 100%;
-height:auto;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+    height: auto;
 }
 
 .divbtn {
     display: flex;
     justify-content: center;
 }
+
+.writeup {
+    padding: 1.5rem;
+ }
 
 .btn {
     padding: 12px;
@@ -76,7 +84,7 @@ height:auto;
     background-color: hsl(158, 36%, 37%);
     border-radius: 7px;
     border: 1px solid hsl(158, 36%, 37%);
-    width: 87%;
+    width: 100%;
     cursor: pointer;
     overflow: hidden;
 }
@@ -108,14 +116,16 @@ a {
     font-size: medium;
 }
 
-@media screen and (min-width:300px) {
-    body {
-        background-color: hsl(30, 38%, 92%);
+@media (min-width:600px) {
+    .product-img {
+        object-fit: cover;
+        height: 100%;
+        border-radius: 10px 0 0 10px;
     }
-}
 
-@media screen and (min-width:350px) {
-    body {
-        background-color: hsl(30, 38%, 92%);
+    .container {
+        display: grid;
+       grid-template-columns: 1fr 1fr;
+       padding-bottom: 0;
     }
 }
