@@ -108,13 +108,13 @@ a {
     font-size: medium;
 }
 
-@media and screen (min-width:300px) {
+@media screen and (min-width:300px) {
     body {
         background-color: hsl(30, 38%, 92%);
     }
 }
 
-@media and screen (min-width:350px) {
+@media screen and (min-width:350px) {
     body {
         background-color: hsl(30, 38%, 92%);
     }
